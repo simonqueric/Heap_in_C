@@ -12,6 +12,7 @@
 
 ### Complexité temporelle du tri par tas
 
+On note $N$ le nombre d'éléments de la liste que l'on souhaite trier
 
 1. Pour créer le tas on a $N$ opérations qui nous coûte chacune $\log{N}$ opérations.
 2. Pour avoir la liste triée il suffit d'appeler la méthode pop $N$ fois qui coûte $\log{N}$ opérations.
