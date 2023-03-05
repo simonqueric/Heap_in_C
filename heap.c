@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-# define N 30
+#define N 30
 
 
 // Implementation d'une structure de tas et des méthodes associées, implémentation du tri par tas
@@ -241,6 +241,5 @@ int main() {
 
   /* Comparaison avec le tri par tas */
 
-  
   return 0; 
 }
