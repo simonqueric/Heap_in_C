@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #define N 30
 
-
 // Implementation d'une structure de tas et des méthodes associées, implémentation du tri par tas
+
+// Déclaration des fonctions et des structures 
 
 typedef struct node {
   int weight; 
@@ -12,7 +13,9 @@ typedef struct node {
 typedef struct Heap {
   struct node array[N] ;
   int next;
-} Heap;
+} Heap ;
+
+
 
 int father(int pos) {
   int k = pos ;
@@ -227,14 +230,26 @@ int main() {
 
   /* ......................................... */
 
-  int T[10] = {1, 6, -7, 10, 205, 2, 5, 10, 6, 7} ;
+  // int* T = malloc(13 * sizeof(int));
+  int T[N] = {4, -6700, 34, 1, 6, -7, 10, 205, 2, 5, 10, 6, 7} ;
+  int i = 0;
+  printf("Liste non triée : \n") ;
+  while (T[i]!='\0') {
+    printf("%d ", T[i]);
+    i++;
+  }
+  printf("\n") ; 
+
 
   int* T_trie; // = malloc(10 * sizeof(int));
 
   T_trie = heap_sort(T) ; 
-
-  for (int i=0; i<10; i++) {
+  
+  printf("Liste triée : \n") ;
+  i=0; 
+  while (T_trie[i]!='\0') {
     printf("%d ", T_trie[i]);
+    i++;
   }
   printf("\n") ; 
 
@@ -242,4 +257,5 @@ int main() {
   /* Comparaison avec le tri par tas */
 
   return 0; 
+
 }
