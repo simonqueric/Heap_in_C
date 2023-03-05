@@ -130,7 +130,7 @@ node pop(Heap* hp) {
 int* heap_sort(int T[]) {
   // Tri une liste d'entier
 
-  // creation du Tas par empilement
+  // creation du Tas 
   int i = 0;
   node n ;
   Heap h = {.next=0} ; 
@@ -142,8 +142,8 @@ int* heap_sort(int T[]) {
 
   int lenght = i ;
   int* T_sorted = malloc(lenght * sizeof(int)); 
-  
-  // dépilement
+
+  // Dépilement du tas
   node pp;
   i=0;
   while (h.next!=0) {
@@ -151,7 +151,6 @@ int* heap_sort(int T[]) {
     T_sorted[i] = pp.weight ; 
     i++;
   }
-  
   return T_sorted ; 
 }
 
@@ -230,7 +229,7 @@ int main() {
 
   int T[10] = {1, 6, -7, 10, 205, 2, 5, 10, 6, 7} ;
 
- int* T_trie = malloc(10 * sizeof(int));
+  int* T_trie; // = malloc(10 * sizeof(int));
 
   T_trie = heap_sort(T) ; 
 
@@ -239,6 +238,7 @@ int main() {
   }
   printf("\n") ; 
 
+  free(T_trie) ;
   /* Comparaison avec le tri par tas */
 
   return 0; 
