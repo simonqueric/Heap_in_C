@@ -9,3 +9,11 @@
 2. ```sh
    ./heap
    ```
+
+### Complexité temporelle du tri par tas
+
+
+1. Pour créer le tas on a $N$ opérations qui nous coûte chacune $\log{N}$ opérations.
+2. Pour avoir la liste triée il suffit d'appeler la méthode pop $N$ fois qui coûte $\log{N}$ opérations.
+
+La complexité est donc en $O(N\log{N})$
